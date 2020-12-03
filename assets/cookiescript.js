@@ -2,6 +2,11 @@
 const cookieSearchBtn = document.getElementById("cookieSearchBtn");
 const cookieContainer = document.getElementById("cookieContainer");
 
+fetch('https://api.spoonacular.com/recipes/complexSearch?query=cookies&number=170&apiKey=37ea1e03e0d84b67992ee6276a961a91')
+    .then(cookieResults => cookieResults.json())
+    .then(cookieData => console.log(cookieData))
+
+
 const cookieSearch = function(){
     event.preventDefault();
     console.log("running a cookie search now");
