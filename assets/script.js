@@ -20,6 +20,11 @@ var userStoryListEl = document.getElementById("kindess-list");
 
 userStoryList = [];
 
+
+randomActsofKindessInput.value = ""
+
+
+
 // when the user clicks the generate button an idea should display in the textarea from an array 
 
 var generateRandomActsofKindness = function (event) {
@@ -48,6 +53,7 @@ var saveRandomActsofKindess = function (event) {
 
     event.preventDefault();
 
+    console.log(randomActsofKindessInput.value);
 
     var userStory = randomActsofKindessInput.value
 
@@ -81,11 +87,9 @@ var loadKindessList = function () {
 
     userStoryList = JSON.parse(localStorage.getItem("userStoryList")) || [];
 
-    console.log(userStoryList);
+    //console.log(userStoryList);
 
-    //userStoryListEl.innerHTML = ""
-
-    
+ 
 
         for (var i= 0; i < userStoryList.length; i++) {
 
