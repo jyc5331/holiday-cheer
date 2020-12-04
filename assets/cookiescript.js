@@ -5,6 +5,7 @@ const cookieImage = document.getElementById("cookieImage");
 const cookieTitle = document.getElementById("cookieTitle");
 const cookieDescription = document.getElementById("cookieDescription");
 
+//HELP fetch API, should probably be incorporated inside of the cookieSearch function
 fetch('https://api.spoonacular.com/recipes/complexSearch?query=cookies&number=170&apiKey=37ea1e03e0d84b67992ee6276a961a91')
     .then(cookieResults => cookieResults.json())
     .then(cookieData => console.log(cookieData))
@@ -29,5 +30,5 @@ const cookieSearch = function(){
        </div>
     </div>
 </div>`
-};  
+};  //end of cookieSearch function
 
