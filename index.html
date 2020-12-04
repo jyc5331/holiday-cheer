@@ -21,6 +21,10 @@ li {
    background-image: url(./assets/images/Hero-image.jpg);
    background-size: cover
 }
+
+.modal {
+  position: relative;
+}
  
 .intro-section{
    background-color: rgba(104, 105, 104, 0.3) ; 
@@ -65,6 +69,7 @@ form, .field {
 .list-title {
    color: white;
 }
+
  
  
  
@@ -119,17 +124,30 @@ form, .field {
  
 <!-- HERO SECTION-->
 
-<!--Music player at top of hero section -->
-<div class="modal">
-  <div class="modal-background"></div>
-  <div class="modal-content">
-    <h1 class="modal-title" id="music-player-modal">Play your favorite Holiday Music!</h1>
-    
+<!--Music player on top of hero section -->
+
+<!-- <section class="modal-player">
+  <div class="modal">
+    <div class="modal-background"></div>
+    <div class="modal-content">
+      <h1 class="modal-title" id="music-player-modal">Play your favorite Holiday Music!</h1>
+      
+    </div>
+    <button class="modal-close is-large" aria-label="close"></button>
   </div>
-  <button class="modal-close is-large" aria-label="close"></button>
-</div>
+</section> -->
  
 <section class="hero is-medium">
+
+  <div class="modal is-active">
+    <div class="modal-background"></div>
+    <div class="modal-content">
+      <h1 class="modal-title" id="music-player-modal"></h1>
+      
+    </div>
+    <button class="modal-close is-large" id="open-modal-btn" aria-label="close"></button>
+  </div>
+
    <div class="hero-body">
      <div style="max-width: 39vw;">
        <h1 class="title has-text-left is-size-2 is-size-3-mobile">
@@ -239,7 +257,10 @@ form, .field {
      
  
 <!--main section ends-->
+
+<!-- Javascript Links -->
 <script src="./assets/script.js"></script>
  <script src="assets/cookiescript.js"></script>
+ <script src="assets/musicplayer.js"></script>
 </body>
 </html>
