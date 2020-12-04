@@ -38,15 +38,7 @@ form, .field {
    margin-right: 10px;
   
 }
- 
-.left-column {
-   z-index: -1;
- }
- 
-.right-column {
-   z-index: -1;
-  
-}
+
  
 .button {
    background-color: rgb(187, 18, 18);
@@ -65,7 +57,6 @@ form, .field {
 .list-title {
    color: white;
 }
- 
  
  
 @media screen and (max-width:415px ){
@@ -159,20 +150,42 @@ form, .field {
          </div>
            <div class="field has-addons is-justify-content-center">
                <div class="control">
-                   <input class="input" type="text" placeholder="search by keyword">
+                   <input class="input" id= "cookie-input" value = "keyword" type="text" placeholder="search by keyword">
                </div>
                <div class="control">
-                <button class="button" id="cookieSearchBtn" onclick="cookieSearch()">Search</button>
+                <button class="button" id="cookieSearchBtn">Search</button>
                </div>
          </div>
        </form>
      <!--<form end-->   
  
-       <!-- recipe card-->
+       <!-- RECIPIE CARD-->
+
+
  <div id="cookieContainer">
+
+    <!--
+    <div class="card-content m-5">
+        <div class="media">
+         <div class="media-left">
+          <figure class="image is-128x128 card-image" id="cookieImage">
+            <img src="https://bulma.io/images/placeholders/256x256.png" alt="Placeholder image">
+          </figure>
+         </div>
+         <div class="media-content">
+          <p class="title is-4" id="cookieTitle">Recipe Title</p>
+          <p></p><br>
+          
+          <a href="" >Recipie Link</a>
+         </div>
+        </div>
+      </div> 
+    -->
+
   </div>
 
-       <!-- RIGHT COLUMN CONTENT-->
+
+ <!-- RIGHT COLUMN CONTENT-->
    </div>
    <div class="column is-auto is-tablet is-mobile right-column">
  
