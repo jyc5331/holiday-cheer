@@ -154,115 +154,24 @@ form, .field {
        <!-- <Cookie Search form>-->
        <form class="has-background-light p-5 ml-5">
          <div class="field has-text-centered">
-               <div class="title">Find a Cookie Recipie to Share!</div>
-               <label class="label">Find a Cookie Recipie</label>
+               <div class="title">Find a Cookie Recipe to Share!</div>
+               <label class="label">Find a Cookie Recipe</label>
          </div>
            <div class="field has-addons is-justify-content-center">
                <div class="control">
                    <input class="input" type="text" placeholder="search by keyword">
                </div>
                <div class="control">
-                   <a class="button">
-                   Search
-                   </a>
+                <button class="button" id="cookieSearchBtn" onclick="cookieSearch()">Search</button>
                </div>
          </div>
        </form>
-     <!--<form end--> 
+     <!--<form end-->   
  
        <!-- recipe card-->
- 
-       <div class="card-content m-5">
-           <div class="media">
-              <div class="media-left">
-               <figure class="image is-128x128 card-image">
-                 <img src="https://bulma.io/images/placeholders/256x256.png" alt="Placeholder image">
-               </figure>
-              </div>
-              <div class="media-content">
-               <p class="title is-4">Recipie Title</p>
-               <p class="subtitle is-6">Ingredients: jkl;safd, dkafjsal, dfjksfajsa, djkfaldf, jdkfalsjsdkf, kdjfkds, jdkfjlalk, jdklsajfdks, jdkslafj, </p>
-               <p> Instructions: Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad deserunt aperiam, quo ullam nihil ea deleniti, ducimus velit est, voluptas architecto debitis? Alias praesentium autem velit? Voluptatibus eligendi nemo quia?</p>
-              </div>
-           </div>
-       </div>
-       <!-- recipe card-->
-       <div class="card-content m-5">
-           <div class="media">
-              <div class="media-left">
-               <figure class="image is-128x128 card-image">
-                 <img src="https://bulma.io/images/placeholders/256x256.png" alt="Placeholder image">
-               </figure>
-              </div>
-              <div class="media-content">
-               <p class="title is-4">Recipie Title</p>
-               <p class="subtitle is-6">Ingredients: afjdksa;fj, akfjsajf, dskafjsla, djfklsiew,  fjiasfdjask</p>
-               <p> Instructions: Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad deserunt aperiam, quo ullam nihil ea deleniti, ducimus velit est, voluptas architecto debitis? Alias praesentium autem velit? Voluptatibus eligendi nemo quia?</p>
-              </div>
-           </div>
-       </div>
-        <!-- recipe card-->
-        <div class="card-content m-5">
-           <div class="media">
-              <div class="media-left">
-               <figure class="image is-128x128 card-image">
-                 <img src="https://bulma.io/images/placeholders/256x256.png" alt="Placeholder image">
-               </figure>
-              </div>
-              <div class="media-content">
-               <p class="title is-4">Recipie Title</p>
-               <p class="subtitle is-6">Ingredients: ;jklfjskkk, fjksdf, sjafkdlas, sjfkdlasf, dkfjalsjf, jdfklaf, djkfald</p>
-               <p> Instructions: Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad deserunt aperiam, quo ullam nihil ea deleniti, ducimus velit est, voluptas architecto debitis? Alias praesentium autem velit? Voluptatibus eligendi nemo quia?</p>
-              </div>
-           </div>
-       </div>
-        <!-- recipe card-->
-        <div class="card-content m-5">
-           <div class="media">
-              <div class="media-left">
-               <figure class="image is-128x128 card-image">
-                 <img src="https://bulma.io/images/placeholders/256x256.png" alt="Placeholder image">
-               </figure>
-              </div>
-              <div class="media-content">
-               <p class="title is-4">Recipie Title</p>
-               <p class="subtitle is-6">Ingredients: ;jklfjskkk, fjksdf, sjafkdlas, sjfkdlasf, dkfjalsjf, jdfklaf, djkfald</p>
-               <p> Instructions: Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad deserunt aperiam, quo ullam nihil ea deleniti, ducimus velit est, voluptas architecto debitis? Alias praesentium autem velit? Voluptatibus eligendi nemo quia?</p>
-              </div>
-           </div>
-       </div>
-        <!-- recipe card-->
-        <div class="card-content m-5">
-           <div class="media">
-              <div class="media-left">
-               <figure class="image is-128x128 card-image">
-                 <img src="https://bulma.io/images/placeholders/256x256.png" alt="Placeholder image">
-               </figure>
-              </div>
-              <div class="media-content">
-               <p class="title is-4">Recipie Title</p>
-               <p class="subtitle is-6">Ingredients: ;jklfjskkk, fjksdf, sjafkdlas, sjfkdlasf, dkfjalsjf, jdfklaf, djkfald</p>
-               <p> Instructions: Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad deserunt aperiam, quo ullam nihil ea deleniti, ducimus velit est, voluptas architecto debitis? Alias praesentium autem velit? Voluptatibus eligendi nemo quia?</p>
-              </div>
-           </div>
-       </div>
-        <!-- recipe card-->
-        <div class="card-content m-5">
-           <div class="media">
-              <div class="media-left">
-               <figure class="image is-128x128 card-image">
-                 <img src="https://bulma.io/images/placeholders/256x256.png" alt="Placeholder image">
-               </figure>
-              </div>
-              <div class="media-content">
-               <p class="title is-4">Recipie Title</p>
-               <p class="subtitle is-6">Ingredients: ;jklfjskkk, fjksdf, sjafkdlas, sjfkdlasf, dkfjalsjf, jdfklaf, djkfald</p>
-               <p> Instructions: Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad deserunt aperiam, quo ullam nihil ea deleniti, ducimus velit est, voluptas architecto debitis? Alias praesentium autem velit? Voluptatibus eligendi nemo quia?</p>
-              </div>
-           </div>
-       </div>
-        <!-- recipe cards end-->
-       
+ <div id="cookieContainer">
+  </div>
+
        <!-- RIGHT COLUMN CONTENT-->
    </div>
    <div class="column is-auto is-tablet is-mobile right-column">
@@ -274,7 +183,7 @@ form, .field {
                <img class="gift-img" src="./assets/images/green gift.png">
            </figure>
        </div>
-       <!--Randone Act of Kindess Generator form -->
+       <!--Random Act of Kindess Generator form -->
        <form>
        <div class="field has-text-centered has-background-light p-5">
            <div class="title">Need Inspiration?</div>
@@ -321,5 +230,6 @@ form, .field {
  
 <!--main section ends-->
 <script src="./assets/script.js"></script>
+ <script src="assets/cookiescript.js"></script>
 </body>
 </html>
