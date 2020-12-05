@@ -1,13 +1,21 @@
-// develop branch MAKE SURE YOUR SCREEN WIDTH IS 750PX OR LOWER
+// Global Variable 
 
 var cookieSearchBtn = document.getElementById("cookieSearchBtn");
-var cookieContainer = document.getElementById("cookieContainer");
 
-// var cookieImage = document.getElementById("cookieImage");
-// var cookieTitle = document.getElementById("cookieTitle");
-// var cookieDescription = document.getElementById("cookieDescription");
+
+// COOKIE DISPLAY 
+
+var cookieJarRight = document.getElementById("cookie-jar-right");
+
+var cookieJarLeft = document.getElementById("cookie-jar-left");
+
+// COOKIE END
 
 var cookieInput = document.getElementById("cookie-input");
+
+cookieInput.value = ""
+
+
 
 
 var getSearchTerm = function (event) {
@@ -18,6 +26,7 @@ var getSearchTerm = function (event) {
    
   getCookieData(searchTerm)
 
+  cookieInput.value = ""
   
 };
 
@@ -27,7 +36,8 @@ var getCookieData = function (searchTerm) {
 
   console.log(searchTerm)
   
-  var cookieDataApiUrl = 'https://api.spoonacular.com/recipes/complexSearch?query='+searchTerm+'+cookies&addRecipeInformation=true&number=170&apiKey=37ea1e03e0d84b67992ee6276a961a91'
+  var cookieDataApiUrl = 'https://api.spoonacular.com/recipes/complexSearch?query='+searchTerm+'+cookies&addRecipeInformation=true&number10&sort=popularity&apiKey=067debed41a440ddb99113e7486666de'
+  
 
     //format the response/promise
     fetch(cookieDataApiUrl)
@@ -52,33 +62,61 @@ var getCookieData = function (searchTerm) {
 
 
 var displayCookieData = function(data){
+
+// set the innter html to "" to clear the place holder images before dynamically displaying fetched data
+
+ cookieJarRight.innerHTML = ""
+
+ cookieJarLeft.innerHTML = ""
   
-  // loop through the data and dynamically create the recipie cards 
+  // needed to create two different arrays from the result so that I could display them properly using bulma tiles
+  // used slice to create 2 arrays of 5 recipies and then looped through them individually to dynamically create the recipe cards  
 
-  for (var i= 0;  i < data.results.length; i++ ) {
+  var arrayOne = data.results.slice(0,5)
 
-    var div = document.createElement("div")
+  console.log(arrayOne);
 
-    var innerHtml = 
+  
+  // loop through first 5 indexes of data array 
 
-      '<div class="card-content m-5">'+
-        '<div class="media">' +
-          '<div class="media-left">' +
-          '<figure class="image is-128x128 card-image">' +
-            '<img src="'+ data.results[i].image +'" alt="Placeholder image">'+
-          '</figure>'+
-         '</div>' +
-         '<div class="media-content">'+
-            '<p class="title is-4" id="cookieTitle">'+ data.results[i].title +'</p>'+
-            '<p></p><br>'+
-            '<a href="" >Recipie Link</a>' +
-         '</div>'+
-        '</div>'+
-      '</div>'
+  for (var i= 0;  i < arrayOne.length; i++ ) {
 
-      div.innerHTML = innerHtml
+    var div = document.createElement("div");
+    div.classList.add("tile", "is-child", "box", "dynamic-div")
 
-      cookieContainer.appendChild(div);
+    var innerHTML = 
+    '<p class="title is-size-6">'+ arrayOne[i].title+'</p>' +
+    '<figure class="image is-4by3">' +
+       '<a href="'+ arrayOne[i].sourceUrl+'"target="_blank"> <img src="'+ arrayOne[i].image +'"></a>'+
+    '</figure>'
+
+    div.innerHTML = innerHTML
+
+    cookieJarLeft.appendChild(div);
+
+  }
+
+  var arrayTwo = data.results.slice(5,11)
+
+  // loop through last 5 indexes of data array 
+
+  for (var i= 0;  i < arrayTwo.length; i++ ){
+
+   // console.log(arrayTwo[i].title);
+
+    var divTwo = document.createElement("div");
+    divTwo.classList.add("tile", "is-child", "box","dynamic-div")
+
+    var innerHTMLTwo = 
+    '<p class="title is-size-6">'+ arrayTwo[i].title+'</p>' +
+    '<figure class="image is-4by3">' +
+       '<a href="'+ arrayTwo[i].sourceUrl+'"target="_blank"> <img src="'+ arrayTwo[i].image +'"></a>'+
+    '</figure>'
+
+    divTwo.innerHTML = innerHTMLTwo
+
+    cookieJarRight.appendChild(divTwo);
+
   }
  
 }; 
