@@ -6,6 +6,7 @@ li {
  .hero {
     background-image: url(./assets/images/Hero-image.jpg);
     background-size: cover;
+    width:  100%;
  }
   
  .intro-section{
@@ -52,6 +53,12 @@ li {
  .dynamic-div img:hover {
      opacity: 0.3;
  }
+
+ button:hover {
+
+    background-color: rgb(211, 5, 5);
+
+ }
   
   
  @media screen and (max-width:415px ){
@@ -82,9 +89,18 @@ li {
         width: 75%;
         margin: 0 auto;
     }
+
+    .tile.is-ancestor {
+        max-width: 70%;
+        margin: 0 auto;
+    }
+
+    .hero {
+        min-height: 300px;
+    }
  }
   
- @media screen and (min-width: 768px){
+ @media screen and (min-width: 769px){
     .gift-img{
         max-width: 75%;
         margin: 0 auto;
@@ -99,5 +115,12 @@ li {
      margin-left: 0.25rem;
      margin-right: 0.25rem;
     }
+
+    .tile.is-ancestor {
+        max-width: 100%;
+    }
+    
  }
+
+ 
   
