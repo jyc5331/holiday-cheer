@@ -50,7 +50,7 @@
  
 <!-- HERO SECTION-->
 
-<!--Music player at top of hero section -->
+<!--jarret's modal -->
 <div class="modal">
   <div class="modal-background"></div>
   <div class="modal-content">
@@ -59,6 +59,20 @@
   </div>
   <button class="modal-close is-large" aria-label="close"></button>
 </div>
+<!-- jarret's modal end-->
+
+<!-- music modal -->
+
+<div class="modal music-modal" id="music-modal">
+    <div class="modal-background"></div>
+    <div class="modal-content">
+        <p class = "mb-5 has-text-white">To listen to music while you browse the website simply press play, then exit out of the screen. If you want to turn off the player click the music icon to re-open the player.</p>
+        <iframe src="https://audiomack.com/embed/song/merlyrodrigueziscrazy/all-i-want-for-christmas-is-you?background=1" scrolling="no" width="100%" height="252" scrollbars="no" frameborder="0"></iframe>
+    </div>
+    <button class="modal-close is-large" id="close-button" aria-label="close"></button>
+  </div>
+
+<!-- music modal end-->
  
 <section class="hero is-medium">
     <!-- music icon buttons-->
@@ -66,7 +80,7 @@
         <div class="navbar-end">
           <!-- navbar items -->
           
-          <a class="button  is-large music-button">
+          <a class="button  is-large music-button" id="music-button">
             <span class="oi" data-glyph="musical-note"></span>
           </a>
           <a class="button is-large music-button">
@@ -268,5 +282,6 @@
 <!--main section ends-->
 <script src="./assets/script.js"></script>
  <script src="assets/cookiescript.js"></script>
+ <script src="./assets/music.js"></script>
 </body>
 </html>
