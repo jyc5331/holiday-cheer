@@ -85,6 +85,14 @@ var loadKindessList = function () {
     // need to clear the inner html before the list is loaded from local storage
     userStoryListEl.innerHTML = ""
 
+    // top of the list will always include these examples 
+    userStoryListEl.innerHTML = 
+
+    "<li class='p-2'>I paid for a woman's groceries when her credit card got declined.</li>"+
+    "<li class='p-2'>I saw a 10 year old boy give his winter coat to another student who couldn't afford a new one</li>" +
+    "<li class='p-2'>EVERY Christmas my sister buys and wraps a bunch of toys for 'Toys for Tots'.</li>"+
+    "<li class='p-2'>I had a family friend that paid for my college school books every year.</li>"
+
     userStoryList = JSON.parse(localStorage.getItem("userStoryList")) || [];
 
     //console.log(userStoryList);

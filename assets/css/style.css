@@ -6,7 +6,12 @@ li {
  .hero {
     background-image: url(./assets/images/Hero-image.jpg);
     background-size: cover;
+    width: 101%;
  }
+
+ .hero-body {
+    width: 100%;
+}
   
  .intro-section{
     background-color: rgba(104, 105, 104, 0.3) ; 
@@ -60,7 +65,7 @@ li {
         margin: 0 auto;
     }
     .left-column {
-     margin-left: -.75rem
+        margin-left: -1.5rem;
     }
  
     .right-column {
@@ -92,12 +97,27 @@ li {
     }
  
     .left-column {
-     margin-left: -.7rem;
+     margin-left: -.7rem; 
     }
  
     .columns {
      margin-left: 0.25rem;
      margin-right: 0.25rem;
     }
+
+    .tile.is-ancestor {
+        max-width: 60%;
+        margin: 0 auto;
+    }
+    
+ }
+
+ @media screen and (min-width: 769px) {
+
+    .tile.is-ancestor {
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
  }
   
