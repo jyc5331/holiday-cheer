@@ -6,7 +6,7 @@ var generateButton = document.getElementById("generate-button");
 
 var displayKindIdea = document.getElementById("generate-textarea");
 
-var kindnessArray = ["Buy coffee for the person behind you in line.", "Volunteer", "Shovel your neighbors walkway or driveway."];
+var kindnessArray = ["Buy a coffee for the person behind you in line", "Volunteer at a local nonprofit", "Shovel your neighbors walkway or driveway", "Sing along with your friend next time they burst into song", "Pick up some trash on your next walk", "When someone cuts you off, wish them a happy holidays, and mean it!", "Check in with one of your neighbors, or just leave a nice note on their door", "Give a follow or share the content of a nonprofit organization on social media", "When you get frustrated, treat yourself like you would want someone else to treat you", "Put a few dollars in your pocket to tip the next small business you buy food or coffee at", "Take a few seconds right now to take some deep breaths and think about something you're grateful for", "Fill and delver a food basket to a person in need.", "Think back to a time when someone helped you in your time of need, and write a heart-felt thank you note to them.", "Donate old books to a local library or bookstore.", "Tell somebody you love them.", "Write a letter to someone you care for.", "Pat yourself on the back for making it through 2020."];
 
 // counter for kindess generator 
 i = 0;
@@ -84,6 +84,14 @@ var loadKindessList = function () {
 
     // need to clear the inner html before the list is loaded from local storage
     userStoryListEl.innerHTML = ""
+
+    // top of the list will always include these examples 
+    userStoryListEl.innerHTML = 
+
+    "<li class='p-2'>I paid for a woman's groceries when her credit card got declined.</li>"+
+    "<li class='p-2'>I saw a 10 year old boy give his winter coat to another student who couldn't afford a new one</li>" +
+    "<li class='p-2'>EVERY Christmas my sister buys and wraps a bunch of toys for 'Toys for Tots'.</li>"+
+    "<li class='p-2'>I had a family friend that paid for my college school books every year.</li>"
 
     userStoryList = JSON.parse(localStorage.getItem("userStoryList")) || [];
 

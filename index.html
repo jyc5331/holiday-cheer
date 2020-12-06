@@ -5,118 +5,44 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Holiday Spirit</title>
        <!-- Compiled and minified bulma css link -->
+    <link rel ="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/open-iconic/1.1.1/font/css/open-iconic.min.css"/>
    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
-   <link rel="styleheet" href="./assets/css/style.css"/> 
+   <link rel="stylesheet" href="./assets/css/style.css"/> 
 </head>
  
 <!-- HELPER CLASSES FOR STYLE-->
 <style>
- 
- 
-li {
-   list-style: none;
-}
+
 .hero {
-   background-image: url(./assets/images/Hero-image.jpg);
-   background-size: cover
-}
-
-.modal {
-  position: relative;
-}
- 
-.intro-section{
-   background-color: rgba(104, 105, 104, 0.3) ; 
-   border-radius: 10px;
-   padding: 10px;
-   color: black;
-}
- 
-form, .field {
-   border-radius: 10px;
-}
- 
-.field{
-   margin-bottom: 10px;
-   margin-right: 10px;
-  
-}
- 
-.left-column {
-   z-index: -1;
+    background-image: url(./assets/images/Hero-image.jpg);
+    background-size: cover;
+    width: 101%;
  }
- 
-.right-column {
-   z-index: -1;
-  
-}
- 
-.button {
-   background-color: rgb(187, 18, 18);
-   color: white;
-   border-radius: 10px;
-}
- 
-.kind-list {
-   background-color: rgb(187, 18, 18);
-   color: white;
-   border-radius: 10px;
-   margin-right: 10px;
-  
-}
- 
-.list-title {
-   color: white;
-}
 
- 
- 
- 
-@media screen and (max-width:415px ){
-   img.gift-img {
-       max-width: 50%;
-       margin: 0 auto;
-   }
-   .left-column {
-    margin-left: -.75rem
-   }
+ .hero-body {
+     width: 100%;
+ }
 
-   .right-column {
-    margin-left: 10px;
-   }
-}
- 
-@media screen and (min-width:420px ){
-   img.gift-img {
-       max-width: 50%;
-       margin: 0 auto;
-   }
-   .right-column {
-       width: 75%;
-       margin: 0 auto;
-   }
-}
- 
-@media screen and (min-width: 768px){
-   .gift-img{
-       max-width: 75%;
-       margin: 0 auto;
-       
-   }
+ .navbar-menu {
+     background-color: rgba(255, 255, 255, 0);
+ }
 
-   .left-column {
-    margin-left: -.7rem;
-   }
+ .music-button {
+     background-color: rgba(255, 255, 255, 0.527);
+     border-color: rgba(255, 255, 255, 0);
+     size: 5rem;
+     margin: 5px;
+ }
 
-   .columns {
-    margin-left: 0.25rem;
-    margin-right: 0.25rem;
-   }
-}
- 
- 
+ .oi {
+     color: black;
+ }
+
+
 </style>
+ 
+ 
 <!-- END HELPER CLASSES FOR STYLE-->
  
  
@@ -124,29 +50,51 @@ form, .field {
  
 <!-- HERO SECTION-->
 
-<!--Music player on top of hero section -->
+<!--jarret's modal -->
+<div class="modal">
+  <div class="modal-background"></div>
+  <div class="modal-content">
+    <h1 class="modal-title" id="music-player-modal">Play your favorite Holiday Music!</h1>
+    
+  </div>
+  <button class="modal-close is-large" aria-label="close"></button>
+</div>
+<!-- jarret's modal end-->
 
-<!-- <section class="modal-player">
-  <div class="modal">
+<!-- music modal -->
+
+<div class="modal music-modal" id="music-modal">
     <div class="modal-background"></div>
     <div class="modal-content">
-      <h1 class="modal-title" id="music-player-modal">Play your favorite Holiday Music!</h1>
-      
+        <p class = "mb-5 has-text-white">To listen to music while you browse the website simply press play, then exit out of the screen. If you want to turn off the player click the music icon to re-open the player.</p>
+        <iframe src="https://audiomack.com/embed/song/merlyrodrigueziscrazy/all-i-want-for-christmas-is-you?background=1" scrolling="no" width="100%" height="252" scrollbars="no" frameborder="0"></iframe>
     </div>
-    <button class="modal-close is-large" aria-label="close"></button>
+    <button class="modal-close is-large" id="close-button" aria-label="close"></button>
   </div>
-</section> -->
+
+<!-- music modal end-->
  
 <section class="hero is-medium">
-
-  <div class="modal is-active">
-    <div class="modal-background"></div>
-    <div class="modal-content">
-      <h1 class="modal-title" id="music-player-modal"></h1>
-      
-    </div>
-    <button class="modal-close is-large" id="open-modal-btn" aria-label="close"></button>
-  </div>
+    <!-- music icon buttons-->
+    <div class="navbar-menu m-5">
+        <div class="navbar-end">
+          <!-- navbar items -->
+          
+          <a class="button  is-large music-button" id="music-button">
+            <span class="oi" data-glyph="musical-note"></span>
+          </a>
+          <a class="button is-large music-button">
+          <span class="oi" data-glyph="heart"></span>
+          </a>
+          <!--<a class="button is-large music-button">
+            <span class="oi icon is-large" data-glyph="play-circle"></span>
+         </a>-->
+        <!-- <a class="button is-large music-button">
+            <span class="oi icon is-large" data-glyph="media-stop"></span>
+         </a>-->
+        </div>
+      </div>
+    <!-- music icon buttons end-->  
 
    <div class="hero-body">
      <div style="max-width: 39vw;">
@@ -167,14 +115,14 @@ form, .field {
 <div class="columns">
  
    <!-- LEFT COLUMN CONTENT-->
-   <div class="column left-column is-8 is-tablet is-12-mobile">
+   <div class="column left-column is-8">
       
   
        <!-- intro-->
  
        <div class="section intro-section ml-5 mt-5 mb-5">
-           INTRO: </br>
-           <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit eum labore voluptatem voluptatibus. Iure asperiores rerum quasi dolore commodi facilis qui accusantium voluptatibus, temporibus laborum necessitatibus dolorem nesciunt id amet.</p>
+           Hello there! </br>
+           <p>This site is the result of a few friends banding together to make a place where anyone can go for some inspiration to brighten their day. Check out our Cookie Recipe search bar for some reasons to fill up your cookie jar. On the right side of the page you can click “generate” to get an idea for a Random Act of Kindness and keep a log of positivity you may have witnessed out in the world at large. We made this page with the holidays in mind, but we encourage you to incorporate some holiday cheer and good will into your life year round!</p>
  
        </div>
       
@@ -187,31 +135,107 @@ form, .field {
          </div>
            <div class="field has-addons is-justify-content-center">
                <div class="control">
-                   <input class="input" type="text" placeholder="search by keyword">
+                   <input class="input" id= "cookie-input" value = "keyword" type="text" placeholder="search by keywords">
                </div>
                <div class="control">
-                <button class="button" id="cookieSearchBtn" onclick="cookieSearch()">Search</button>
+                <button class="button" id="cookieSearchBtn">Search</button>
                </div>
          </div>
        </form>
      <!--<form end-->   
  
-       <!-- recipe card-->
- <div id="cookieContainer">
+       <!-- RECIPE CARDS-->
+
+  <!-- cookie pictures (placeholders) that hide when recipies get generated-->
+  <div class="tile is-ancestor mt-2">
+    <!-- left vertical parent -->
+    <div class="tile is-vertical is-parent" id="cookie-jar-left">
+        
+        <!--HIDE-->
+        
+         <div class="tile is-child box">
+            <p class="title is-size-6"></p>
+            <figure class="image is-4by3">
+                <img src="./assets/images/cookie-1786885_1280.jpg">
+              </figure>
+        </div>
+        <div class="tile is-child box">
+            <p class="title is-size-6"></p>
+            <figure class="image is-4by3">
+                <img src="./assets/images/chocolate cookies.jpg">
+              </figure>
+        </div>
+        <div class="tile is-child box">
+            <p class="title is-size-6"></p>
+            <figure class="image is-4by3">
+                <img src="./assets/images/choc chip.jpg">
+              </figure>
+        </div>
+        <div class="tile is-child box">
+            <p class="title is-size-6"></p>
+            <figure class="image is-4by3">
+                <img src="./assets/images/white cookie.jpg">
+              </figure>
+        </div>
+        
+        <!--HIDE -->
+        
+    </div>
+
+
+    <!--right vertical parent-->
+
+    <div class="tile is-vertical is-parent" id="cookie-jar-right">
+
+        <!--HIDE-->
+         
+         <div class="tile is-child box">
+            <p class="title is-size-6"></p>
+            <figure class="image is-4by3">
+                <img src="./assets/images/christmas-4666410_1280.jpg">
+              </figure>
+        </div>
+        <div class="tile is-child box">
+            <p class="title is-size-6"></p>
+            <figure class="image is-4by3">
+                <img src="./assets/images/heart gingerbread.jpg">
+              </figure>
+        </div>
+        <div class="tile is-child box">
+            <p class="title is-size-6"></p>
+            <figure class="image is-4by3">
+                <img src="./assets/images/hot-chocolate-1782623_1280.webp">
+              </figure>
+        </div>
+        <div class="tile is-child box">
+            <p class="title is-size-6"></p>
+            <figure class="image is-4by3">
+                <img src="./assets/images/colorsss cookies.jpg">
+              </figure>
+        </div>
+        
+        <!--HIDE-->
+
+    </div>
+
+
   </div>
 
-       <!-- RIGHT COLUMN CONTENT-->
+  <!---->
+
+
+ <!-- RIGHT COLUMN CONTENT-->
    </div>
-   <div class="column is-auto is-tablet is-mobile right-column">
+   <div class="column right-column">
  
        <div class="section">
-       <div class="title">Give the Gift of Kindess...</div>
+       <div class="title">Give the Gift of Kindness...</div>
        <div class="subtitle is-italic ">do something kind for a loved one, friend, or stranger!</div>
            <figure class="image is-256x256">
                <img class="gift-img" src="./assets/images/green gift.png">
            </figure>
        </div>
-       <!--Random Act of Kindess Generator form -->
+       <!--Random Act of Kindness Generator form -->
        <form>
        <div class="field has-text-centered has-background-light p-5">
            <div class="title">Need Inspiration?</div>
@@ -240,9 +264,8 @@ form, .field {
        </form>
        <!-- acts of kindess list -->
        <div class="section p-0 kind-list has-text-centered is-justify-content-center">
-        <div class="title pt-5 list-title"> Random Acts of Kindess</div>
+        <div class="title pt-5 list-title"> Random Acts of Kindness</div>
            <ul class="pb-5" id="kindess-list">
-           
            <!--<li class="p-2"> 1. act of kindess</li>
            <li class="p-2"> 2. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Excepturi laboriosam at vero assumenda aut distinctio</li>
            <li class="p-2"> 3. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quod vel explicabo similique numquam reiciendis exercitationem ullam</li>-->
@@ -261,6 +284,6 @@ form, .field {
 <!-- Javascript Links -->
 <script src="./assets/script.js"></script>
  <script src="assets/cookiescript.js"></script>
- <script src="assets/musicplayer.js"></script>
+ <script src="./assets/music.js"></script>
 </body>
 </html>
