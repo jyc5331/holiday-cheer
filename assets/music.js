@@ -6,7 +6,7 @@ var closeButton = document.getElementById("close-button");
 
 
 var displayModal = function () {
-
+    
     musicModal.classList.add("is-active")   
 };
 

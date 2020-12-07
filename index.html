@@ -51,13 +51,19 @@
 <!-- HERO SECTION-->
 
 <!--jarret's modal -->
-<div class="modal">
-  <div class="modal-background"></div>
-  <div class="modal-content">
-    <h1 class="modal-title" id="music-player-modal">Play your favorite Holiday Music!</h1>
-    
+<div class="modal" id="openModal">
+  <div class="modal-wrapper" >
+    <div class="modal-content">
+      <p class="charity-name" id="charity1"></p>
+      <p class="charity-name" id="charity2"></p>
+      <p class="charity-name" id="charity3"></p>
+      <p class="charity-name" id="charity4"></p>
+      <p class="charity-name" id="charity5"></p>
+      
+      <button class="modal-close is-large" id="close-button2" aria-label="close"></button>
+    </div>
   </div>
-  <button class="modal-close is-large" aria-label="close"></button>
+  <!--<button class="modal-close is-large" id="charityBtn"></button> -->
 </div>
 <!-- jarret's modal end-->
 
@@ -83,7 +89,7 @@
           <a class="button  is-large music-button" id="music-button">
             <span class="oi" data-glyph="musical-note"></span>
           </a>
-          <a class="button is-large music-button">
+          <a class="button is-large music-button" id="charity-button">
           <span class="oi" data-glyph="heart"></span>
           </a>
           <!--<a class="button is-large music-button">
@@ -285,5 +291,6 @@
 <script src="./assets/script.js"></script>
  <script src="assets/cookiescript.js"></script>
  <script src="./assets/music.js"></script>
+ <script src="assets/charitysearch.js"></script>
 </body>
 </html>

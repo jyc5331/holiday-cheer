@@ -57,6 +57,44 @@ li {
  .dynamic-div img:hover {
      opacity: 0.3;
  }
+
+ .modal {
+   display: none; 
+   position: fixed; 
+   z-index: 1; 
+   left: 0;
+   top: 0;
+   width: 50%; 
+   height: 35%; 
+   background-color: rgb(238, 227, 227); 
+   background-color: rgba(253, 9, 62, 0.4); 
+ }
+
+ 
+.modal-content {
+   background-color: #fefefe;
+   margin: 5px 5px 5px 5px; 
+   padding: 0px;
+   border: 20px solid #888;
+   width: 80%;
+   height: 40%; 
+   position: fixed;
+ }
+ 
+
+ .modal-close {
+   color: #aaa;
+   float: right;
+   font-size: 28px;
+   font-weight: bold;
+ }
+ 
+ .modal-close:hover,
+ .modal-close:focus {
+   color: black;
+   text-decoration: none;
+   cursor: pointer;
+ }
   
   
  @media screen and (max-width:415px ){
