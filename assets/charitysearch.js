@@ -54,7 +54,7 @@ var fetchCharityData = function (searchInput) {
     charity = searchInput;
     
     // format charity search url
-    var charityDataApiUrl = "https://data.orghunter.com/v1/charitysearch?user_key=b621ed5a3921119ea871a341755aece6&searchTerm=" + searchInput + "";
+    var charityDataApiUrl = "https://cors-anywhere.herokuapp.com/https://data.orghunter.com/v1/charitysearch?user_key=b621ed5a3921119ea871a341755aece6&searchTerm=" + searchInput + "";
 
     // make a request to api
     fetch(charityDataApiUrl)
