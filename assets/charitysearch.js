@@ -64,7 +64,7 @@ var fetchCharityData = function (searchInput) {
           // if request succesful  
           if (response.ok){
             response.json().then(function(data) {
-                displayCharities(data);
+                displayCharities(data.data);
               });
             } else {
               alert("Error: " + response.statusText);
@@ -77,7 +77,7 @@ var fetchCharityData = function (searchInput) {
 
 // Fxn to display data in modal
 var displayCharities = function(charity) {
-
+ 
     // check if api returned any repos
     if (charity.length === 0) {
     charityContainerEl.textContent = "No charities found.";
@@ -93,30 +93,23 @@ var displayCharities = function(charity) {
         var charityN = charity[i].charityName
   
         // create a container for each charity
-        var charityEl = document.createElement("p");
+        var charityEl = document.createElement("div");
         charityEl.classList.add("tile", "is-child", "box", "dynamic-div");
   
         // create a span element to hold charity name
         var titleEl = document.createElement("span");
         titleEl.textContent = charityN;
-  
-        // append to container
+
+        //create a span element to hold charity url
+        var charityUrlEl = document.createElement("span");
+        charityUrlEl.setAttribute("href", charity[i].html_url);
+        charityUrlEl.setAttribute("target", "_blank");
+  console.log(charityUrlEl);
+        // append to charity name container
         charityEl.appendChild(titleEl);
-  
-    //     // create a status element
-    //     var statusEl = document.createElement("span");
-    //     statusEl.classList = "flex-row align-center";
 
-    //     // check if current repo has issues or not
-    //     if (repos[i].open_issues_count > 0) {
-    //      statusEl.innerHTML =
-    //      "<i class='fas fa-times status-icon icon-danger'></i>" + repos[i].open_issues_count + " issue(s)";
-    //     } else {
-    //     statusEl.innerHTML = "<i class='fas fa-check-square status-icon icon-success'></i>";
-    // }
-
-        // append to container
-        //repoEl.appendChild(statusEl);
+        //append charity url to container
+        charityEl.appendChild(charityUrlEl);
         
         // append container to the dom
         charityContainerEl.appendChild(charityEl);
