@@ -8,7 +8,7 @@ var searchInputEl = document.getElementById("search-input");
 
 var searchBtn = document.getElementById("site-search");
 
-var charityContainerEl = document.getElementById("charity-one");
+var charityContainerEl = document.getElementById("charity1");
 
 // FXN TO OPEN MODAL 
 var openCharityModal = function () {
@@ -80,23 +80,23 @@ var displayCharities = function(charity) {
 
     // check if api returned any repos
     if (charity.length === 0) {
-    charityContainerEl.textContent = "No chairites found.";
+    charityContainerEl.textContent = "No charities found.";
     return;
   }
 
     charityContainerEl.textContent = "";
-    searchInputEl.textContent = searchInput;
+    //searchInputEl.textContent = searchInput;
 
-    // loop over repos
+    // loop over charities
     for (var i = 0; i < charity.length; i++) {
-        // format repo name
-        var charityN = charity[i].data.charityName
+        // format charity name
+        var charityN = charity[i].charityName
   
-        // create a container for each repo
-        var charityEl = document.createElement("div");
-        charityEl.classList = "list-item flex-row justify-space-between align-center";
+        // create a container for each charity
+        var charityEl = document.createElement("p");
+        charityEl.classList.add("tile", "is-child", "box", "dynamic-div");
   
-        // create a span element to hold repository name
+        // create a span element to hold charity name
         var titleEl = document.createElement("span");
         titleEl.textContent = charityN;
   
