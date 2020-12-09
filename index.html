@@ -55,13 +55,30 @@
 <!-- HERO SECTION-->
 
 <!--jarret's modal -->
-<div class="modal">
-  <div class="modal-background"></div>
-  <div class="modal-content">
-    <h1 class="modal-title" id="music-player-modal">Play your favorite Holiday Music!</h1>
+<div class="modal-1" id="openModal">
+  <div class="modal-wrapper" >
+    <div class="modal-content-charity is-clipped " id="content-container">
     
+    <div class="field has-addons is-justify-content-center">
+      <div class="charity-control">
+          <input class="input" id= "search-input" value = "" type="search" placeholder="search by keywords">
+      </div>
+      <div class="control">
+       <button class="button" id="site-search">Search</button>
+      </div>
+    </div>
+      
+    <div class = "columns is-multiline is- mobile">
+      <div class ="column is-full charity-name" id="charity1"></div>
+      <!-- <div class ="column is-full charity-name" id="charity2"></div>
+      <div class ="column is-full charity-name" id="charity3"></div>
+      <div class ="column is-full charity-name" id="charity4"></div>
+      <div class ="column is-full charity-name" id="charity5"></div> -->
+    </div>  
+      
+      <button class="modal-close is-large" id="close-button2" aria-label="close"></button>
+    </div>
   </div>
-  <button class="modal-close is-large" aria-label="close"></button>
 </div>
 <!-- jarret's modal end-->
 
@@ -86,7 +103,7 @@
           <a class="button  is-large music-button" id="music-button">
             <span class="oi" data-glyph="musical-note"></span>
           </a>
-          <a class="button is-large music-button">
+          <a class="button is-large music-button" id="charity-button">
           <span class="oi" data-glyph="heart"></span>
           </a>
           <!--<a class="button is-large music-button">
@@ -288,9 +305,12 @@
      
  
 <!--main section ends-->
+
+<!-- Javascript Links -->
 <script src="./assets/script.js"></script>
  <script src="assets/cookiescript.js"></script>
  <script src="./assets/music.js"></script>
+ <script src="assets/charitysearch.js"></script>
 </body>
 </html>
 

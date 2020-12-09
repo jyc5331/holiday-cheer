@@ -142,6 +142,101 @@ form,
   }
 }
 
+ .dynamic-div img:hover {
+     opacity: 0.3;
+ }
+
+ .modal-1 {
+   display: none; 
+   position: fixed; 
+   z-index: 1; 
+   left: 0;
+   top: 0;
+   width: 50%; 
+   height: 35%; 
+   background-color: rgb(238, 227, 227); 
+   background-color: rgba(253, 9, 62, 0.4); 
+ }
+
+ 
+.modal-content-charity {
+   background-color: #fefefe;
+   margin: 5px 5px 5px 5px; 
+   padding: 0px;
+   border: 20px solid #888;
+   width: 80%;
+   height: 40%; 
+   position: fixed;
+ }
+ 
+
+ .modal-close {
+   color: #aaa;
+   float: right;
+   font-size: 28px;
+   font-weight: bold;
+ }
+ 
+ .modal-close:hover,
+ .modal-close:focus {
+   color: black;
+   text-decoration: none;
+   cursor: pointer;
+ }
+  
+  
+ @media screen and (max-width:415px ){
+    img.gift-img {
+        max-width: 50%;
+        margin: 0 auto;
+    }
+    .left-column {
+        margin-left: -1.5rem;
+    }
+ 
+    .right-column {
+     margin-left: 10px;
+    }
+
+    .tile.is-ancestor {
+        margin-left: 0.25rem;
+        margin-right: -1.45rem;
+    }
+ }
+  
+ @media screen and (min-width:420px ){
+    img.gift-img {
+        max-width: 50%;
+        margin: 0 auto;
+    }
+    .right-column {
+        width: 75%;
+        margin: 0 auto;
+    }
+ }
+  
+ @media screen and (min-width: 768px){
+    .gift-img{
+        max-width: 75%;
+        margin: 0 auto;
+        
+    }
+ 
+    .left-column {
+     margin-left: -.7rem; 
+    }
+ 
+    .columns {
+     margin-left: 0.25rem;
+     margin-right: 0.25rem;
+    }
+
+    .tile.is-ancestor {
+        max-width: 60%;
+        margin: 0 auto;
+    }
+    
+ }
 @media screen and (min-width: 420px) {
   img.gift-img {
     max-width: 50%;
