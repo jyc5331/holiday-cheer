@@ -19,6 +19,38 @@ li {
     padding: 10px;
     color: black;
  }
+
+ /* tooltip */
+ .tooltip {
+     position: relative;
+     display: inline-block;
+     
+ }
+
+ .tooltip .tooltiptext {
+     visibility: hidden;
+     width:350px;
+     background-color: rgba(7, 37, 1, 0.24);
+     color: black;
+     font-size: small;
+     text-align: center;
+     padding: 3px;
+     border-radius: 5px;
+
+     position: absolute;
+     z-index: 1;
+     bottom: -130%;
+     left: 50%;
+     margin-left: -60px;
+     
+     
+
+ }
+
+ .tooltip:hover .tooltiptext {
+     visibility: visible;
+     opacity: 1;
+ }
   
  form, .field {
     border-radius: 10px;

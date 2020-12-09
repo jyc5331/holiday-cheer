@@ -4,11 +4,15 @@
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Holiday Spirit</title>
+
        <!-- Compiled and minified bulma css link -->
+
     <link rel ="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/open-iconic/1.1.1/font/css/open-iconic.min.css"/>
    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+   
    <link rel="stylesheet" href="./assets/css/style.css"/> 
+   
 </head>
  
 <!-- HELPER CLASSES FOR STYLE-->
@@ -36,7 +40,7 @@
  }
 
  .oi {
-     color: black;
+     color: rgb(8, 8, 8);
  }
 
 
@@ -135,7 +139,12 @@
          </div>
            <div class="field has-addons is-justify-content-center">
                <div class="control">
+                   <!-- tooltip container-->
+                   <div class="tooltip">
+                    <span class="tooltiptext">Search by keywords or dietary preferences (e.g. gluten free, dairy free, chocolate, peanut butter etc).</span>
                    <input class="input" id= "cookie-input" value = "keyword" type="text" placeholder="search by keywords">
+                   </div>
+                   <!--tooltip end-->
                </div>
                <div class="control">
                 <button class="button" id="cookieSearchBtn">Search</button>
@@ -285,3 +294,6 @@
  <script src="./assets/music.js"></script>
 </body>
 </html>
+
+
+<!--Embeded Music/ iframe from audiomack api-->
