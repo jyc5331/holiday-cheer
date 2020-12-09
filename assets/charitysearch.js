@@ -56,7 +56,7 @@ var fetchCharityData = function (searchInput) {
     charity = searchInput;
     
     // format charity search url
-    var charityDataApiUrl = "https://cors-anywhere.herokuapp.com/https://data.orghunter.com/v1/charitysearch?user_key=b621ed5a3921119ea871a341755aece6&searchTerm=" + searchInput + "";
+    var charityDataApiUrl = "https://cors-anywhere.herokuapp.com/https://data.orghunter.com/v1/charitysearch?user_key=b621ed5a3921119ea871a341755aece6&searchTerm=" + searchInput + " &rows=5 ";
 
     // make a request to api
     fetch(charityDataApiUrl)
@@ -100,16 +100,18 @@ var displayCharities = function(charity) {
         var titleEl = document.createElement("span");
         titleEl.textContent = charityN;
 
-        //create a span element to hold charity url
-        var charityUrlEl = document.createElement("span");
-        charityUrlEl.setAttribute("href", charity[i].html_url);
+        //create a span element to hold charity url and wrap in anchor tag, add button to links 
+        var charityUrlEl = document.createElement("a");
+        charityUrlEl.setAttribute("href", charity[i].url);
         charityUrlEl.setAttribute("target", "_blank");
-  console.log(charityUrlEl);
+        charityUrlEl.textContent = " Click Here to Visit Charity Site! "
+        console.log(charityUrlEl);
+        
         // append to charity name container
-        charityEl.appendChild(titleEl);
+        charityEl.append(titleEl);
 
         //append charity url to container
-        charityEl.appendChild(charityUrlEl);
+        charityEl.append(charityUrlEl);
         
         // append container to the dom
         charityContainerEl.appendChild(charityEl);

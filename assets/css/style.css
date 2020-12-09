@@ -58,7 +58,7 @@ li {
      opacity: 0.3;
  }
 
- .modal {
+ .modal-1 {
    display: none; 
    position: fixed; 
    z-index: 1; 
