@@ -2,6 +2,8 @@ Holiday Cheer is a website designed to spread the joy of baked goods and acts of
 
 Collaborators: Joseph Cosgrove, Jarrett DeVose, Kristy zur Muhlen
 
+Deployment link: https://jyc5331.github.io/holiday-cheer/
+
 Technologies used: HTML, CSS, JS, APIs, Bulma
 
 APIs:
